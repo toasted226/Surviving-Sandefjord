@@ -32,6 +32,7 @@ public class Campfire : Interactable
             indicatorAlpha = maxAlpha;
         }
         
+
         Color c = heatIndicator.color;
         heatIndicator.color = new Color(c.r, c.g, c.b, indicatorAlpha);
 

@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         coldVignetteAlpha = 0f;
-        deathPanelAlpha = 0f;
     }
     
     void Update()
@@ -58,7 +57,6 @@ public class Player : MonoBehaviour
             // You're going to die now, dear boy
         }
 
-        // Update alphas
         Color vignette = coldVignette.color;
         Color death = deathPanel.color;
         coldVignette.color = new Color(vignette.r, vignette.g, vignette.b, coldVignetteAlpha);

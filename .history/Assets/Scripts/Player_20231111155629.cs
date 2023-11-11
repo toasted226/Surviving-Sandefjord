@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         coldVignetteAlpha = 0f;
-        deathPanelAlpha = 0f;
     }
     
     void Update()

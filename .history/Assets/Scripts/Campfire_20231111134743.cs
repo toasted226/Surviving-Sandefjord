@@ -11,13 +11,9 @@ public class Campfire : Interactable
 
     [SerializeField]private SpriteRenderer heatIndicator;
 
-    private float indicatorAlpha;
-    private float maxAlpha;
-
     void Start()
     {
-        indicatorAlpha = heatIndicator.color.a;
-        maxAlpha = indicatorAlpha;
+        heatRemaining = maxHeat / 3;
         heatIndicator.transform.localScale = new Vector3(heatRange * 2, heatRange * 2, 1f);
     }
 
@@ -25,15 +21,8 @@ public class Campfire : Interactable
     {
         if (heatRemaining < warningThreshold) 
         {
-            indicatorAlpha = heatRemaining / warningThreshold * maxAlpha;
-        } 
-        else
-        {
-            indicatorAlpha = maxAlpha;
+            
         }
-        
-        Color c = heatIndicator.color;
-        heatIndicator.color = new Color(c.r, c.g, c.b, indicatorAlpha);
 
         if (heatRemaining > 0)
         {

@@ -25,14 +25,13 @@ public class Campfire : Interactable
     {
         if (heatRemaining < warningThreshold) 
         {
+            Color c = heatIndicator.color;
             indicatorAlpha = heatRemaining / warningThreshold * maxAlpha;
-        } 
-        else
+        } else 
         {
             indicatorAlpha = maxAlpha;
         }
         
-        Color c = heatIndicator.color;
         heatIndicator.color = new Color(c.r, c.g, c.b, indicatorAlpha);
 
         if (heatRemaining > 0)

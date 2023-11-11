@@ -16,8 +16,8 @@ public class Campfire : Interactable
 
     void Start()
     {
+        heatRemaining = maxHeat / 3;
         indicatorAlpha = heatIndicator.color.a;
-        maxAlpha = indicatorAlpha;
         heatIndicator.transform.localScale = new Vector3(heatRange * 2, heatRange * 2, 1f);
     }
 
@@ -25,15 +25,10 @@ public class Campfire : Interactable
     {
         if (heatRemaining < warningThreshold) 
         {
-            indicatorAlpha = heatRemaining / warningThreshold * maxAlpha;
-        } 
-        else
-        {
-            indicatorAlpha = maxAlpha;
+            Color c = heatIndicator.color;
+            indicatorAlpha = heatRemaining / warningThreshold;
+            heatIndicator.color = new Color(c.r, c.g, c.b, indicatorAlpha);
         }
-        
-        Color c = heatIndicator.color;
-        heatIndicator.color = new Color(c.r, c.g, c.b, indicatorAlpha);
 
         if (heatRemaining > 0)
         {
