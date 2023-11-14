@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6418542821385995984}
   - component: {fileID: 3461247101104637262}
-  - component: {fileID: 2672624583639657874}
+  - component: {fileID: -9074951797668233509}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Wood
@@ -70,7 +70,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
---- !u!114 &2672624583639657874
+--- !u!114 &-9074951797668233509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,11 +79,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2377775718610917063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff34a59017912f45bae193067e260f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3286a058c2b333c4a862024b94730d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isHeavy: 1
+  usable: 0
   canInteract: 1
+  addedHeat: 10
 --- !u!1 &4940389012221534985
 GameObject:
   m_ObjectHideFlags: 0
